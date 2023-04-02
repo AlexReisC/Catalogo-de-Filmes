@@ -5,12 +5,14 @@ public class Filme {
     private int anoDePublicacao;
     private String diretor;
     private String genero;
+    private double avaliacao;
 
-    public Filme(String titulo, int ano, String diretor, String genero){
+    public Filme(String titulo, int ano, String diretor, String genero, double av){
         this.titulo = titulo;
         this.anoDePublicacao = ano;
         this.diretor = diretor;
         this.genero = genero;
+        this.avaliacao = av;
     }
 
     public String getTitulo() {
@@ -39,6 +41,13 @@ public class Filme {
     }
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    public double getAvaliacao() {
+        return avaliacao;
+    }
+    public void setAvaliacao(double avaliacao) {
+        this.avaliacao = avaliacao;
     }
     
     public void getInformacoes(){
