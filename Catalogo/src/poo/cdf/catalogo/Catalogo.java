@@ -1,20 +1,24 @@
-package filmes;
+package poo.cdf.catalogo;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import poo.cdf.midia.Midia;
+
 public class Catalogo {
-    private List<Filme> filmes;
+    private List<Midia> filmes; // cria uma lista de midias
 
     public Catalogo(){
         filmes = new ArrayList<>();
     }
 
-    public void adicionarFilme(Filme f){
+    // Adicionar um filme ao catalogo
+    public void adicionarFilme(Midia f){
         filmes.add(f);
         System.out.println("Filme " + f.getTitulo() + " adicionado ao catalogo.");
     }
 
+    // Listar todos os filmes presentes
     public void listarFilmes(){
         System.out.println("\n-----------------");
         System.out.println("Filmes no catalogo:");
@@ -24,7 +28,8 @@ public class Catalogo {
         System.out.println("-----------------\n");
     }
 
-    public void excluirFilme(Filme f){
+    // Remover um filme do catalogo
+    public void excluirFilme(Midia f){
         if(filmes.isEmpty()){
             System.out.println("Catalogo vazio!");
         } else{
@@ -37,8 +42,15 @@ public class Catalogo {
         }
     }
 
-    /* public Filme buscar(Filme f){
-           
-    } */
+    // Buscar um filme especifico e obter suas informações
+    public void buscar(Midia f){
+        for (Midia filme : filmes) {
+            if (filme.equals(f)) {
+                f.getInformacoes();
+            } else{
+                System.out.println("Filme não encontrado no catalogo.");
+            }
+        }
+    }
 
 }

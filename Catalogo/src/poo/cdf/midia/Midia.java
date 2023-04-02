@@ -1,20 +1,21 @@
-package filmes;
+package poo.cdf.midia;
 
-public class Filme {
-    private String titulo;
-    private int anoDePublicacao;
-    private String diretor;
-    private String genero;
-    private double avaliacao;
+public abstract class Midia {
+    protected String titulo;
+    protected int anoDePublicacao;
+    protected String diretor;
+    protected String genero;
+    protected double avaliacao;
 
-    public Filme(String titulo, int ano, String diretor, String genero, double av){
+    public Midia(String titulo, int ano, String diretor, String genero, double avaliacao){
         this.titulo = titulo;
         this.anoDePublicacao = ano;
         this.diretor = diretor;
         this.genero = genero;
-        this.avaliacao = av;
+        this.avaliacao = avaliacao;
     }
 
+    // gets e setters dos atributos:
     public String getTitulo() {
         return titulo;
     }
@@ -49,9 +50,10 @@ public class Filme {
     public void setAvaliacao(double avaliacao) {
         this.avaliacao = avaliacao;
     }
-    
+    // ------------------------
+
+    // Obter as informações sobre filme
     public void getInformacoes(){
-        
     }
     
 }

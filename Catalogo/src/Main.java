@@ -1,19 +1,19 @@
-import filmes.Catalogo;
-import filmes.Filme;
+import poo.cdf.catalogo.Catalogo;
+import poo.cdf.midia.Midia;
 
 public class Main {
     public static void main(String[] args) {
-        Catalogo c = new Catalogo();
+        // Catalogo c = new Catalogo();
 
-        Filme filme1 = new Filme("Homem de Ferro", 2008, "Kevin Feige", "Marvel Studios", 7.5);
-        Filme filme2 = new Filme("Vingadores: Guerra Infinita", 2019, "Antony Russo", "Marvel Studios", 8.5);       
+        //Midia filme1 = new Midia("Homem de Ferro", 2008, "Kevin Feige", "Marvel Studios", 7.5);
+        //Midia filme2 = new Midia("Vingadores: Guerra Infinita", 2019, "Antony Russo", "Marvel Studios", 8.5);       
         
-        c.adicionarFilme(filme1);
+        /* c.adicionarFilme(filme1);
         c.listarFilmes();
         c.adicionarFilme(filme2);
         c.listarFilmes();
 
         c.excluirFilme(filme1);
-        c.listarFilmes();
+        c.listarFilmes(); */
     }
 }
