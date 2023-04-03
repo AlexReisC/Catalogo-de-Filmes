@@ -3,14 +3,14 @@ package poo.cdf.midia;
 public abstract class Midia {
     protected String titulo;
     protected int anoDePublicacao;
-    protected String diretor;
+    protected String estudio;
     protected String genero;
     protected double avaliacao;
 
-    public Midia(String titulo, int ano, String diretor, String genero, double avaliacao){
+    public Midia(String titulo, int ano, String estudio, String genero, double avaliacao){
         this.titulo = titulo;
         this.anoDePublicacao = ano;
-        this.diretor = diretor;
+        this.estudio = estudio;
         this.genero = genero;
         this.avaliacao = avaliacao;
     }
@@ -30,11 +30,12 @@ public abstract class Midia {
         this.anoDePublicacao = anoDePublicacao;
     }
 
-    public String getDiretor() {
-        return diretor;
+    public String getEstudio() {
+        return estudio;
     }
-    public void setDiretor(String diretor) {
-        this.diretor = diretor;
+
+    public void setEstudio(String estudio) {
+        this.estudio = estudio;
     }
 
     public String getGenero() {
@@ -55,5 +56,7 @@ public abstract class Midia {
     // Obter as informações sobre filme
     public void getInformacoes(){
     }
+
+
     
 }

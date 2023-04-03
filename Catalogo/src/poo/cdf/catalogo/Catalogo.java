@@ -6,7 +6,8 @@ import java.util.List;
 import poo.cdf.midia.*;
 
 public class Catalogo {
-    private List<Midia> midias; // cria uma lista de midias
+    // Lista das midias
+    private List<Midia> midias; 
     private List<Filme> filmes;
     private List<Serie> series;
     private List<Documentario> documentarios;
@@ -16,14 +17,13 @@ public class Catalogo {
         filmes = new ArrayList<>();
         series = new ArrayList<>();
         documentarios = new ArrayList<>();
-    }
+    }    
 
     // Adicionar uma midia ao catalogo
-    public void adicionarMidia(Midia f){
-        midias.add(f);
-        System.out.println("Midia " + f.getTitulo() + " adicionado ao catalogo.");
+    /* public void adicionarMidia(){
+        System.out.println("Midia " + m.getTitulo() + " adicionado ao catalogo.");
     }
-
+ */
     // Listar todos os midias presentes
     public void listarMidias(){
         System.out.println("\n-----------------");
