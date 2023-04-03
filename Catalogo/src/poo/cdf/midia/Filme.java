@@ -8,8 +8,8 @@ public class Filme extends Midia{
 
     @Override
     public void getInformacoes() {
-        // TODO Auto-generated method stub
-        super.getInformacoes();
+        System.out.println("Titulo do filme: " + this.titulo + " Genero: " + this.genero + "\nAno de estreia: " + 
+        this.anoDePublicacao + "\nDirigido por: " + this.diretor + "\nAvaliação: " + this.avaliacao);
     }
     
 }

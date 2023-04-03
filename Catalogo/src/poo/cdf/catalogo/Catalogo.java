@@ -6,49 +6,49 @@ import java.util.List;
 import poo.cdf.midia.Midia;
 
 public class Catalogo {
-    private List<Midia> filmes; // cria uma lista de midias
+    private List<Midia> midias; // cria uma lista de midias
 
     public Catalogo(){
-        filmes = new ArrayList<>();
+        midias = new ArrayList<>();
     }
 
     // Adicionar um filme ao catalogo
-    public void adicionarFilme(Midia f){
-        filmes.add(f);
-        System.out.println("Filme " + f.getTitulo() + " adicionado ao catalogo.");
+    public void adicionarMidia(Midia f){
+        midias.add(f);
+        System.out.println("Midia " + f.getTitulo() + " adicionado ao catalogo.");
     }
 
-    // Listar todos os filmes presentes
-    public void listarFilmes(){
+    // Listar todos os midias presentes
+    public void listarMidias(){
         System.out.println("\n-----------------");
-        System.out.println("Filmes no catalogo:");
-        for (int i = 0; i < filmes.size() ; i++) {
-            System.out.println(filmes.get(i).getTitulo());
+        System.out.println("Midias no catalogo:");
+        for (int i = 0; i < midias.size() ; i++) {
+            System.out.println(midias.get(i).getTitulo());
         }
         System.out.println("-----------------\n");
     }
 
-    // Remover um filme do catalogo
-    public void excluirFilme(Midia f){
-        if(filmes.isEmpty()){
+    // Remover um midia do catalogo
+    public void excluirMidia(Midia f){
+        if(midias.isEmpty()){
             System.out.println("Catalogo vazio!");
         } else{
-            for (int i = 0; i < filmes.size(); i++) {
-                if(filmes.get(i) == f){
-                    filmes.remove(f);
+            for (int i = 0; i < midias.size(); i++) {
+                if(midias.get(i) == f){
+                    midias.remove(f);
                 }
             }
-            System.out.println("O filme foi removido.");
+            System.out.println("O midia foi removido.");
         }
     }
 
-    // Buscar um filme especifico e obter suas informações
+    // Buscar um midia especifico e obter suas informações
     public void buscar(Midia f){
-        for (Midia filme : filmes) {
-            if (filme.equals(f)) {
+        for (Midia midia : midias) {
+            if (midia.equals(f)) {
                 f.getInformacoes();
             } else{
-                System.out.println("Filme não encontrado no catalogo.");
+                System.out.println("Midia não encontrado no catalogo.");
             }
         }
     }
