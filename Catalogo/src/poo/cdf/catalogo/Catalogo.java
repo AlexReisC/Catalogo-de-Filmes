@@ -3,16 +3,22 @@ package poo.cdf.catalogo;
 import java.util.ArrayList;
 import java.util.List;
 
-import poo.cdf.midia.Midia;
+import poo.cdf.midia.*;
 
 public class Catalogo {
     private List<Midia> midias; // cria uma lista de midias
+    private List<Filme> filmes;
+    private List<Serie> series;
+    private List<Documentario> documentarios;
 
     public Catalogo(){
         midias = new ArrayList<>();
+        filmes = new ArrayList<>();
+        series = new ArrayList<>();
+        documentarios = new ArrayList<>();
     }
 
-    // Adicionar um filme ao catalogo
+    // Adicionar uma midia ao catalogo
     public void adicionarMidia(Midia f){
         midias.add(f);
         System.out.println("Midia " + f.getTitulo() + " adicionado ao catalogo.");
