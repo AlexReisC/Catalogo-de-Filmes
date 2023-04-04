@@ -9,5 +9,6 @@ public class Documentario extends Midia{
     @Override
     public void getInformacoes() {
         super.getInformacoes();
-    }  
+    }
+    
 }
