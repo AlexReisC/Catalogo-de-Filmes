@@ -2,14 +2,14 @@ package poo.cdf.midia;
 
 public abstract class Midia {
     protected String titulo;
-    protected int anoDePublicacao;
+    protected int anoDeEstreia;
     protected String estudio;
     protected String genero;
     protected double avaliacao;
 
     public Midia(String titulo, int ano, String estudio, String genero, double avaliacao){
         this.titulo = titulo;
-        this.anoDePublicacao = ano;
+        this.anoDeEstreia = ano;
         this.estudio = estudio;
         this.genero = genero;
         this.avaliacao = avaliacao;
@@ -23,11 +23,12 @@ public abstract class Midia {
         this.titulo = titulo;
     }
 
-    public int getAnoDePublicacao() {
-        return anoDePublicacao;
+    public int getAnoDeEstreia() {
+        return anoDeEstreia;
     }
-    public void setAnoDePublicacao(int anoDePublicacao) {
-        this.anoDePublicacao = anoDePublicacao;
+
+    public void setAnoDeEstreia(int anoDeEstreia) {
+        this.anoDeEstreia = anoDeEstreia;
     }
 
     public String getEstudio() {
@@ -57,6 +58,4 @@ public abstract class Midia {
     public void getInformacoes(){
     }
 
-
-    
 }

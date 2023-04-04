@@ -9,7 +9,7 @@ public class Filme extends Midia{
     @Override
     public void getInformacoes() {
         System.out.println("Titulo do filme: " + this.titulo + " Genero: " + this.genero + "\nAno de estreia: " + 
-        this.anoDePublicacao + "\nDirigido por: " + this.estudio + "\nAvaliação: " + this.avaliacao);
+        this.anoDeEstreia + "\nDirigido por: " + this.estudio + "\nAvaliação: " + this.avaliacao);
     }
     
 }
