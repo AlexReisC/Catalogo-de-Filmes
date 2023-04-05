@@ -7,4 +7,4 @@ Interface
 - adicionarFavorito()
 
 Catalogo
-- rankearFilmes()
+- rankearFilmes() // Lista em ordem do maior ao menor, as 10 midias com maior avaliação.
