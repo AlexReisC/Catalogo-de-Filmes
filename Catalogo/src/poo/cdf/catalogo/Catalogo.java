@@ -89,14 +89,37 @@ public class Catalogo {
     }
 
     // Buscar um midia especifico e obter suas informações
-    /* public void buscar(Midia f){
-        for (Midia midia : midias) {
-            if (midia.equals(f)) {
+    public void buscarFilme(Filme f){
+        for (Filme filme : filmes) {
+            if (filme.equals(f)) {
                 f.getInformacoes();
             } else{
-                System.out.println("Midia não encontrado no catalogo.");
+                System.out.println("Filme não encontrado no catalogo.");
             }
         }
-    } */
+    }
 
+    public void buscarSerie(Serie s){
+        for (Serie serie : series) {
+            if (serie.equals(s)) {
+                s.getInformacoes();
+            } else{
+                System.out.println("Serie não encontrada no catalogo.");
+            }
+        }
+    }
+
+    public void buscarDocumentario(Documentario d){
+        for (Documentario documentario : documentarios) {
+            if (documentario.equals(d)) {
+                d.getInformacoes();
+            } else{
+                System.out.println("Documentario não encontrado no catalogo.");
+            }
+        }
+    }
+    // ----------------------
+
+    // rankear as midias com as melhores avaliacoes
+    
 }
