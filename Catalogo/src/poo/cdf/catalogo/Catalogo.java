@@ -87,6 +87,7 @@ public class Catalogo {
             System.out.println("O documentario " + d.getTitulo() + " foi removido.");
         }
     }
+    // --------------------
 
     // Buscar um midia especifico e obter suas informações
     public void buscarFilme(Filme f){
@@ -120,6 +121,34 @@ public class Catalogo {
     }
     // ----------------------
 
-    // rankear as midias com as melhores avaliacoes
-    
+    // Rankear as midias com as melhores avaliacoes
+    public void rankear(){
+        Midia[] avaliacoes = new Midia[10];
+
+        for (int i = 0; i < filmes.size(); i++) {
+            for (int j = 1; j < filmes.size()+1; j++) {
+                if(filmes.get(i).getAvaliacao() > filmes.get(j).getAvaliacao() && avaliacoes[9] == null){
+                    avaliacoes[i] = filmes.get(i);
+                }
+            }
+        }
+
+        for (int i = 0; i < series.size(); i++) {
+            if(series.get(i).getAvaliacao() > avaliacoes[i].getAvaliacao()){
+                avaliacoes[i] = series.get(i);
+            }
+        }
+
+        for (int i = 0; i < documentarios.size(); i++) {
+            if(documentarios.get(i).getAvaliacao() > avaliacoes[i].getAvaliacao()){
+                avaliacoes[i] = documentarios.get(i);
+            }
+        }
+
+        System.out.println("* Top 10 mais bem avaliados *");
+        for (int i = 0; i < avaliacoes.length; i++) {
+            System.out.println((i+1) + "." + avaliacoes[i].getTitulo() + " Nota: " + avaliacoes[i].getAvaliacao());
+        }
+    }
+
 }
