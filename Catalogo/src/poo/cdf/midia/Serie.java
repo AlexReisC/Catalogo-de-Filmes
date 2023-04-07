@@ -2,33 +2,33 @@ package poo.cdf.midia;
 
 public class Serie extends Midia {
     private int temporadas;
-    private int nEpsodios;
+    private int episodios;
     // Ideia: matriz de temporadas e episodios   
 
-    public Serie(String titulo, int ano, String estudio, String genero, double avaliacao, int temp) {
-        super(titulo, ano, estudio, genero, avaliacao);
-        this.temporadas = temp;
+    public Serie(String titulo, int ano, String diretor, String estudio, String genero, double avaliacao,
+            int temporadas, int episodios) {
+        super(titulo, ano, diretor, estudio, genero, avaliacao);
+        this.temporadas = temporadas;
+        this.episodios = episodios;
     }
 
     @Override
     public void getInformacoes() {
-        super.getInformacoes();
+        System.out.println("Titulo: " + this.titulo + " \nGenero: " + this.genero + "\nAno de estreia: " + 
+        this.anoDeEstreia + "\nDirigido por: " + this.diretor + "\nAvaliação: " + this.avaliacao);
     }
 
     public int getTemporadas() {
         return temporadas;
     }
-
     public void setTemporadas(int temporadas) {
         this.temporadas = temporadas;
     }
 
-    public int getnEpsodios() {
-        return nEpsodios;
+    public int getEpisodios() {
+        return episodios;
     }
-
-    public void setnEpsodios(int nEpsodios) {
-        this.nEpsodios = nEpsodios;
+    public void setEpisodios(int episodios) {
+        this.episodios = episodios;
     }
-    
 }

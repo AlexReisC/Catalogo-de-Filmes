@@ -36,25 +36,25 @@ public class Catalogo {
         System.out.println("\n-----------------");
         System.out.println("Filmes no catalogo:");
         for (Filme f : filmes) {
-            System.out.println(f.getTitulo() + "(" + f.getAnoDeEstreia() + ")");
+            System.out.println(f.getTitulo() + " (" + f.getAnoDeEstreia() + ")");
         }
         System.out.println("-----------------\n");
     }
 
     public void listarSeries(){
-        System.out.println("\n-----------------");
+        System.out.println("-----------------");
         System.out.println("Series no catalogo:");
         for (Serie s : series) {
-            System.out.println(s.getTitulo() + "(" + s.getAnoDeEstreia() + ")");
+            System.out.println(s.getTitulo() + " (" + s.getAnoDeEstreia() + ")");
         }
         System.out.println("-----------------\n");
     }
 
     public void listarDocumentarios(){
-        System.out.println("\n-----------------");
+        System.out.println("-----------------");
         System.out.println("Documentarios no catalogo:");
         for (Documentario d : documentarios) {
-            System.out.println(d.getTitulo() + "(" + d.getAnoDeEstreia() + ")");
+            System.out.println(d.getTitulo() + " (" + d.getAnoDeEstreia() + ")");
         }
         System.out.println("-----------------\n");
     }

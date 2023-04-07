@@ -4,12 +4,14 @@ public abstract class Midia {
     protected String titulo;
     protected int anoDeEstreia;
     protected String estudio;
+    protected String diretor;
     protected String genero;
     protected double avaliacao;
 
-    public Midia(String titulo, int ano, String estudio, String genero, double avaliacao){
+    public Midia(String titulo, int ano, String diretor, String estudio, String genero, double avaliacao){
         this.titulo = titulo;
         this.anoDeEstreia = ano;
+        this.diretor = diretor;
         this.estudio = estudio;
         this.genero = genero;
         this.avaliacao = avaliacao;
@@ -52,10 +54,16 @@ public abstract class Midia {
     public void setAvaliacao(double avaliacao) {
         this.avaliacao = avaliacao;
     }
+
+    public String getDiretor() {
+        return diretor;
+    }
+    public void setDiretor(String diretor) {
+        this.diretor = diretor;
+    }
     // ------------------------
 
     // Obter as informações sobre filme
     public void getInformacoes(){
     }
-
 }

@@ -5,6 +5,7 @@ Anotação:
 <br>
 Interface
 - adicionarFavorito()
+- getTrailer()
 
 Catalogo
 - rankearFilmes() // Lista em ordem do maior ao menor, as 10 midias com maior avaliação.
