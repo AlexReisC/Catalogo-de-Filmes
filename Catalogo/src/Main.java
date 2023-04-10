@@ -12,12 +12,12 @@ public class Main {
         c.adicionarFilme(filme1);
         c.adicionarFilme(filme2);
         c.adicionarSerie(s1);
-        c.listarFilmes();
-        c.listarSeries();
-        //c.rankear();
-        c.excluirFilme(filme1);
+        //c.listarFilmes();
+        //c.listarSeries();
+        
+        /* c.excluirFilme(filme1);
         c.buscarFilme(filme1);
-        c.buscarFilme(filme2);
+        c.buscarFilme(filme2); */
         
     }
 }
