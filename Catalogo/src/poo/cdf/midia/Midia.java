@@ -1,6 +1,6 @@
 package poo.cdf.midia;
 
-public abstract class Midia {
+public abstract class Midia{
     protected String titulo;
     protected int anoDeEstreia;
     protected String estudio;
@@ -66,4 +66,5 @@ public abstract class Midia {
     // Obter as informações sobre filme
     public void getInformacoes(){
     }
+
 }

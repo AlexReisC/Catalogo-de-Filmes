@@ -1,127 +1,63 @@
 package poo.cdf.catalogo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import poo.cdf.midia.*;
 
-public class Catalogo {
+public class Catalogo{
     // Lista das midias
-    private List<Filme> filmes;
-    private List<Serie> series;
-    private List<Documentario> documentarios;
+    private List<Midia> midias;
 
     public Catalogo(){
-        filmes = new ArrayList<>();
-        series = new ArrayList<>();
-        documentarios = new ArrayList<>();
-    }    
+        midias = new ArrayList<Midia>();
+    }
 
     // Adicionar uma midia ao catalogo
-    public void adicionarFilme(Filme f){
-        filmes.add(f);
-    }
-
-    public void adicionarSerie(Serie s){
-        series.add(s);
-    }
-
-    public void adicionarDocumentario(Documentario d){
-        documentarios.add(d);
+    public void adicionarMidia(Midia m){
+        midias.add(m);
     }
     // -------------------
     
     // Listar todas as midias presentes
-    public void listarFilmes(){
+    public void listarMidias(){
         System.out.println("\n-----------------");
-        System.out.println("Filmes no catalogo:");
-        for (Filme f : filmes) {
-            System.out.println(f.getTitulo() + " (" + f.getAnoDeEstreia() + ")");
-        }
-        System.out.println("-----------------\n");
-    }
-
-    public void listarSeries(){
-        System.out.println("-----------------");
-        System.out.println("Series no catalogo:");
-        for (Serie s : series) {
-            System.out.println(s.getTitulo() + " (" + s.getAnoDeEstreia() + ")");
-        }
-        System.out.println("-----------------\n");
-    }
-
-    public void listarDocumentarios(){
-        System.out.println("-----------------");
-        System.out.println("Documentarios no catalogo:");
-        for (Documentario d : documentarios) {
-            System.out.println(d.getTitulo() + " (" + d.getAnoDeEstreia() + ")");
+        System.out.println("Midias no catalogo:");
+        for (Midia m : midias) {
+            System.out.println(m.getTitulo() + " (" + m.getAnoDeEstreia() + ")");
         }
         System.out.println("-----------------\n");
     }
     // --------------------
 
     // Remover um midia do catalogo
-    public void excluirFilme(Filme f){
-        if(filmes.isEmpty()){
-            System.out.println("Catalogo de filmes vazio!");
+    public void excluirMidia(Midia m){
+        if(midias.isEmpty()){
+            System.out.println("Catalogo de midias vazio!");
         } else{
-            filmes.remove(f);
-            System.out.println("O filme " + f.getTitulo() + " foi removido.");
-        }
-    }
-
-    public void excluirSerie(Serie s){
-        if(series.isEmpty()){
-            System.out.println("Catalogo de series vazio!");
-        } else{
-            series.remove(s);
-            System.out.println("A serie " + s.getTitulo() + " foi removido.");
-        }
-    }
-
-    public void excluirDocumentario(Documentario d){
-        if(documentarios.isEmpty()){
-            System.out.println("Catalogo de documentarios vazio!");
-        } else{
-            documentarios.remove(d);
-            System.out.println("O documentario " + d.getTitulo() + " foi removido.");
+            midias.remove(m);
+            System.out.println(m.getTitulo() + " foi removido.");
         }
     }
     // --------------------
 
     // Buscar um midia especifico e obter suas informações
-    public void buscarFilme(Filme f){
-        for (Filme filme : filmes) {
-            if (filme.equals(f)) {
-                f.getInformacoes();
-            } else{
-                System.out.println("Filme não encontrado no catalogo.");
-            }
+    public void buscarMidia(Midia m){
+        if(midias.isEmpty()){
+            System.out.println("Catalogo vazio.");
         }
-    }
-
-    public void buscarSerie(Serie s){
-        for (Serie serie : series) {
-            if (serie.equals(s)) {
-                s.getInformacoes();
-            } else{
-                System.out.println("Serie não encontrada no catalogo.");
-            }
-        }
-    }
-
-    public void buscarDocumentario(Documentario d){
-        for (Documentario documentario : documentarios) {
-            if (documentario.equals(d)) {
-                d.getInformacoes();
-            } else{
-                System.out.println("Documentario não encontrado no catalogo.");
+        for (Midia midia : midias) {
+            if (midia.equals(m)) {
+                m.getInformacoes();
             }
         }
     }
     // ----------------------
-
-    // Rankear as midias com as melhores avaliacoes
     
-
+    // Rankear as midias com as melhores avaliacoes
+    public void ranker(){
+        System.out.println("Midias mais bem avaliadas");
+        
+    }
 }
