@@ -14,8 +14,8 @@ public class Main {
         c.adicionarMidia(s1);
         c.listarMidias();
         
-        c.excluirMidia(filme2);
+        //c.excluirMidia(filme2);
         c.buscarMidia(filme2);
-        
+        c.ranker();
     }
 }

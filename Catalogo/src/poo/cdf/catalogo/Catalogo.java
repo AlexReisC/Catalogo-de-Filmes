@@ -1,8 +1,8 @@
 package poo.cdf.catalogo;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.Collections;
 
 import poo.cdf.midia.*;
 
@@ -57,7 +57,13 @@ public class Catalogo{
     
     // Rankear as midias com as melhores avaliacoes
     public void ranker(){
+        System.out.println("------------------");
         System.out.println("Midias mais bem avaliadas");
-        
+        Collections.sort(midias, new ComparadorNota());
+        for (int i = 0; i < midias.size(); i++) {
+            System.out.println((i+1) + ". " + midias.get(i).getTitulo() + " - " + midias.get(i).getAvaliacao());
+        }
+        System.out.println("-----------------");
     }
+
 }
