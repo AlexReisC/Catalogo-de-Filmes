@@ -47,14 +47,21 @@ public class Catalogo{
     // --------------------
 
     // Buscar um midia especifico e obter suas informações
-    public void buscarMidia(Midia m){
+    public void buscarMidia(String titulo){
+        boolean achou = false;
         if(midias.isEmpty()){
             System.out.println("Catalogo vazio.");
-        }
-        for (Midia midia : midias) {
-            if (midia.equals(m)) {
-                m.getInformacoes();
+        } else{
+            
+            for (Midia midia : midias) {
+                if (midia.getTitulo() == titulo) {
+                    midia.getInformacoes();
+                    achou = true;
+                }
             }
+        }
+        if(achou == false){
+            System.out.println("Midia não encontrada!");
         }
     }
     // ----------------------

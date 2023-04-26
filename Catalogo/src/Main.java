@@ -12,11 +12,11 @@ public class Main {
         c.adicionarMidia(filme1);
         c.adicionarMidia(filme2);
         c.adicionarMidia(s1);
-        /* c.listarMidias();
+        //c.listarMidias();
         
-        //c.excluirMidia(filme2);
-        c.buscarMidia(filme2);
-        c.ranker(); */
-        c.listarMidiasPorGenero("Super-Herói");
+        c.excluirMidia(filme2);
+        c.buscarMidia("Vingadores: Guerra Infinita");
+        /*c.ranker();
+        c.listarMidiasPorGenero("Super-Herói"); */
     }
 }
