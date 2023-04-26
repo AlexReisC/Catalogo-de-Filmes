@@ -9,6 +9,7 @@ import poo.cdf.midia.*;
 public class Catalogo{
     // Lista das midias
     private List<Midia> midias;
+    // lista de generos favoritos
 
     public Catalogo(){
         midias = new ArrayList<Midia>();
@@ -99,4 +100,9 @@ public class Catalogo{
     }
     // ---------------------
 
+    // Metodo para adicionar os generos favoritos
+
+    // Metodo para notificar quando uma midia de um genero favorito for adicionado ao catalogo
+
+    // Metodos para avaliar as midias, fazer crticas e ver criticas
 }

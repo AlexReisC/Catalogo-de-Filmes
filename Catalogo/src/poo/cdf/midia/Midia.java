@@ -8,6 +8,8 @@ public abstract class Midia{
     protected String genero;
     protected double avaliacao;
 
+    // Remover avaliacao do construtor, criar um metodo pro usuario avaliar a midia
+
     public Midia(String titulo, int ano, String diretor, String estudio, String genero, double avaliacao){
         this.titulo = titulo;
         this.anoDeEstreia = ano;
