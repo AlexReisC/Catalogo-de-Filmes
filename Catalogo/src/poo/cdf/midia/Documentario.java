@@ -2,8 +2,8 @@ package poo.cdf.midia;
 
 public class Documentario extends Midia{
 
-    public Documentario(String titulo, int ano, String diretor, String estudio, String genero, double avaliacao) {
-        super(titulo, ano, diretor, estudio, genero, avaliacao);
+    public Documentario(String titulo, int ano, String diretor, String estudio, String genero) {
+        super(titulo, ano, diretor, estudio, genero);
     }
 
     @Override

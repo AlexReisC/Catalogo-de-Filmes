@@ -5,9 +5,8 @@ public class Serie extends Midia {
     private int episodios;
     // Ideia: matriz de temporadas e episodios   
 
-    public Serie(String titulo, int ano, String diretor, String estudio, String genero, double avaliacao,
-            int temporadas, int episodios) {
-        super(titulo, ano, diretor, estudio, genero, avaliacao);
+    public Serie(String titulo, int ano, String diretor, String estudio, String genero, int temporadas, int episodios) {
+        super(titulo, ano, diretor, estudio, genero);
         this.temporadas = temporadas;
         this.episodios = episodios;
     }

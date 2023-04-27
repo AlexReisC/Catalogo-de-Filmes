@@ -5,9 +5,9 @@ public class Main {
     public static void main(String[] args) {
         Catalogo c = new Catalogo();
 
-        Filme filme1 = new Filme("Homem de Ferro", 2008, "Kevin Feige", "Marvel Studios", "Super-Herói", 7.5);
-        Filme filme2 = new Filme("Vingadores: Guerra Infinita", 2019, "Antony Russo", "Marvel Studios", "Super-Herói", 8.5);
-        Serie s1 = new Serie("The Boys", 2020, "Sei lá", "HBO","Super-Heroi", 9.0, 3, 36);
+        Filme filme1 = new Filme("Homem de Ferro", 2008, "Kevin Feige", "Marvel Studios", "Super-Herói");
+        Filme filme2 = new Filme("Vingadores: Guerra Infinita", 2019, "Antony Russo", "Marvel Studios", "Super-Herói");
+        Serie s1 = new Serie("The Boys", 2020, "Sei lá", "HBO","Super-Heroi", 3, 36);
 
         c.adicionarMidia(filme1);
         c.adicionarMidia(filme2);
@@ -15,8 +15,9 @@ public class Main {
         //c.listarMidias();
         
         c.excluirMidia(filme2);
-        c.buscarMidia("Vingadores: Guerra Infinita");
+        // c.pesquisarMidia("Vingadores: Guerra Infinita");
         /*c.ranker();
-        c.listarMidiasPorGenero("Super-Herói"); */
+        c.pesquisarPorGenero("Super-Herói"); */
+        c.pesquisarPorAnoDeEstreia(2020);
     }
 }

@@ -10,13 +10,12 @@ public abstract class Midia{
 
     // Remover avaliacao do construtor, criar um metodo pro usuario avaliar a midia
 
-    public Midia(String titulo, int ano, String diretor, String estudio, String genero, double avaliacao){
+    public Midia(String titulo, int ano, String diretor, String estudio, String genero){
         this.titulo = titulo;
         this.anoDeEstreia = ano;
         this.diretor = diretor;
         this.estudio = estudio;
         this.genero = genero;
-        this.avaliacao = avaliacao;
     }
 
     // gets e setters dos atributos:

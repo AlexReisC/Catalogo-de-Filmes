@@ -48,7 +48,7 @@ public class Catalogo{
     // --------------------
 
     // Buscar um midia especifico e obter suas informações
-    public void buscarMidia(String titulo){
+    public void pesquisarMidia(String titulo){
         boolean achou = false;
         if(midias.isEmpty()){
             System.out.println("Catalogo vazio.");
@@ -83,9 +83,9 @@ public class Catalogo{
     //-------------------
 
     // Listar midias por genero
-    public void listarMidiasPorGenero(String genero){
+    public void pesquisarPorGenero(String genero){
         System.out.println("\n-----------------");
-        System.out.println("Midias no catalogo do genero " + genero);
+        System.out.println("Midias no catalogo do genero " + genero + ":");
         int achou = 0;
         for (Midia m : midias) {
             if(m.getGenero() == genero){
@@ -100,9 +100,34 @@ public class Catalogo{
     }
     // ---------------------
 
-    // Metodo para adicionar os generos favoritos
+    public void pesquisarPorAnoDeEstreia(int ano){
+        System.out.println("\n-----------------");
+        System.out.println("Midias no catalogo do ano de " + ano + ":");
+        int achou = 0;
+        for (Midia m : midias) {
+            if(m.getAnoDeEstreia() == ano){
+                System.out.println(m.getTitulo());
+                achou++;
+            }
+        }
+        if(achou == 0){
+            System.out.println("Nenhuma midia encontrada.");
+        }
+        System.out.println("-----------------\n");
+    }
 
-    // Metodo para notificar quando uma midia de um genero favorito for adicionado ao catalogo
 
-    // Metodos para avaliar as midias, fazer crticas e ver criticas
+
+    /* FUNCIONALIDADES
+    Permitir que os usuários possam pesquisar por filmes e séries utilizando palavras-chave, gênero, ano de lançamento, classificação etária, entre outros filtros.
+
+    Permitir que os administradores do sistema possam cadastrar novos títulos, incluindo informações como nome, sinopse, elenco, diretor, gênero, classificação, entre outras informações relevantes.
+
+    Permitir que os usuários possam marcar títulos como favoritos ou adicionar à sua lista de interesse, facilitando a navegação e a escolha do que assistir.
+
+    Permitir que os usuários possam avaliar e escrever críticas sobre os títulos, bem como visualizar as avaliações e críticas de outros usuários.
+
+    Permitir que os usuários possam receber notificações sobre novos lançamentos e títulos adicionados ao catálogo de gêneros marcados como favorito.
+
+ */
 }
