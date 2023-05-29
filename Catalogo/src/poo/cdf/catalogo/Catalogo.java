@@ -10,7 +10,7 @@ public class Catalogo{
     // Lista das midias
     private List<Midia> midias;
     // Lista de usuarios
-    private List<Usuaro> usuarios;
+    private List<Usuario> usuarios;
     // lista de generos favoritos
 
     public Catalogo(){
@@ -19,7 +19,9 @@ public class Catalogo{
     }
 
     // Adicionar uma midia ao catalogo
+    // ADMINISTRADOR
     public void adicionarMidia(Midia m){
+        // verificar se é o administrador
         midias.add(m);
     }
     // -------------------
@@ -40,6 +42,7 @@ public class Catalogo{
     // --------------------
 
     // Remover um midia do catalogo
+    // ADMINISTRADOR
     public void excluirMidia(Midia m){
         if(midias.isEmpty()){
             System.out.println("Catalogo de midias vazio!");
@@ -119,8 +122,18 @@ public class Catalogo{
         System.out.println("-----------------\n");
     }
 
+    public List<Midia> getLista(){
+        return midias;
+    }
 
     // Lista de usuarios: login e senha
+    public void Logar(Usuario usuario){
+        for (Usuario u : usuarios) {
+            if(u.getLogin().equals(usuario.getLogin()) && u.getSenha().equals(usuario.getSenha())){
+                usuario.midias = getLista();
+            }
+        }
+    }
 
     /* FUNCIONALIDADES
     Permitir que os usuários possam pesquisar por filmes e séries utilizando palavras-chave, gênero, ano de lançamento, classificação etária, entre outros filtros.

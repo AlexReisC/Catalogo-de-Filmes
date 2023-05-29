@@ -1,4 +1,5 @@
 import poo.cdf.catalogo.Catalogo;
+import poo.cdf.catalogo.Usuario;
 import poo.cdf.midia.*;
 
 public class Main {
@@ -13,11 +14,12 @@ public class Main {
         c.adicionarMidia(filme2);
         c.adicionarMidia(s1);
         //c.listarMidias();
+        Usuario u1 = new Usuario("Alex", "Alek", "123");
         
-        c.excluirMidia(filme2);
+        //c.excluirMidia(filme2);
         // c.pesquisarMidia("Vingadores: Guerra Infinita");
         /*c.ranker();
         c.pesquisarPorGenero("Super-Herói"); */
-        c.pesquisarPorAnoDeEstreia(2020);
+        //c.pesquisarPorAnoDeEstreia(2020);
     }
 }
