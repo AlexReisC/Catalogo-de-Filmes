@@ -9,10 +9,13 @@ import poo.cdf.midia.*;
 public class Catalogo{
     // Lista das midias
     private List<Midia> midias;
+    // Lista de usuarios
+    private List<Usuaro> usuarios;
     // lista de generos favoritos
 
     public Catalogo(){
         midias = new ArrayList<Midia>();
+        usuarios = new ArrayList<Usuario>();
     }
 
     // Adicionar uma midia ao catalogo
@@ -68,7 +71,7 @@ public class Catalogo{
     // ----------------------
     
     // Rankear as midias com as melhores avaliacoes
-    public void ranker(){
+    public void rank(){
         System.out.println("------------------");
         System.out.println("Midias mais bem avaliadas");
         Collections.sort(midias, new ComparadorNota());
@@ -117,6 +120,7 @@ public class Catalogo{
     }
 
 
+    // Lista de usuarios: login e senha
 
     /* FUNCIONALIDADES
     Permitir que os usuários possam pesquisar por filmes e séries utilizando palavras-chave, gênero, ano de lançamento, classificação etária, entre outros filtros.
