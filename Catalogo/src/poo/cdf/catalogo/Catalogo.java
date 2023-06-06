@@ -8,9 +8,9 @@ import poo.cdf.midia.*;
 
 public class Catalogo{
     // Lista das midias
-    private List<Midia> midias;
+    public List<Midia> midias;
     // Lista de usuarios
-    private List<Usuario> usuarios;
+    public List<Usuario> usuarios;
     // lista de generos favoritos
 
     public Catalogo(){
@@ -127,13 +127,13 @@ public class Catalogo{
     }
 
     // Lista de usuarios: login e senha
-    public void Logar(Usuario usuario){
+    /* public void Logar(Usuario usuario){
         for (Usuario u : usuarios) {
             if(u.getLogin().equals(usuario.getLogin()) && u.getSenha().equals(usuario.getSenha())){
                 usuario.midias = getLista();
             }
         }
-    }
+    } */
 
     /* FUNCIONALIDADES
     Permitir que os usuários possam pesquisar por filmes e séries utilizando palavras-chave, gênero, ano de lançamento, classificação etária, entre outros filtros.

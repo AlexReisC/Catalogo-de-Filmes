@@ -10,7 +10,6 @@ public class Usuario {
     private String login;
     private String senha;
     private ArrayList<Midia> favoritos = new ArrayList<>();
-    protected List<Midia> midias;
 
     public Usuario(String nome, String login, String senha){
         this.nome = nome;
@@ -50,13 +49,30 @@ public class Usuario {
         this.favoritos = favoritos;
     }
 
+    // Adicionar um favorito
+    public void favoritar(String nome, ArrayList<Midia> midias){
+        for (Midia midia : midias) {
+            if (midia.getTitulo() == nome) {
+                favoritos.add(midia);
+            }
+        }
+        System.out.println("Adicionado aos favoritos!");
+    }
+
+    // Listar favoritos
+    public void listarFavoritos(){
+        System.out.println("*   FAVORITOS   *");
+        for (Midia midia : favoritos) {
+            System.out.println(midia.getTitulo());
+        }
+    }
+
     // Buscar uma midia especifica e obter suas informações
-    public void pesquisarMidia(String titulo){
+    public void pesquisarMidia(String titulo, ArrayList<Midia> midias){
         boolean achou = false;
         if(midias.isEmpty()){
             System.out.println("Catalogo vazio.");
         } else{
-            
             for (Midia midia : midias) {
                 if (midia.getTitulo() == titulo) {
                     midia.getInformacoes();
@@ -69,7 +85,7 @@ public class Usuario {
         }
     }
 
-    public void pesquisarPorAnoDeEstreia(int ano){
+    public void pesquisarPorAnoDeEstreia(int ano, ArrayList<Midia> midias){
         System.out.println("\n-----------------");
         System.out.println("Midias no catalogo do ano de " + ano + ":");
         int achou = 0;
@@ -85,7 +101,7 @@ public class Usuario {
         System.out.println("-----------------\n");
     }
 
-    public void pesquisarPorGenero(String genero){
+    public void pesquisarPorGenero(String genero, ArrayList<Midia> midias){
         System.out.println("\n-----------------");
         System.out.println("Midias no catalogo do genero " + genero + ":");
         int achou = 0;
@@ -101,9 +117,12 @@ public class Usuario {
         System.out.println("-----------------\n");
     }
 
-    /* Permitir que os usuários possam pesquisar por filmes e séries utilizando palavras-chave, gênero, ano de lançamento, classificação etária, entre outros filtros.
+    // Avaliar
+    
 
-    Permitir que os usuários possam marcar títulos como favoritos ou adicionar à sua lista de interesse, facilitando a navegação e a escolha do que assistir.
+    /* Permitir que os usuários possam pesquisar por filmes e séries utilizando palavras-chave, gênero (ok), ano de lançamento(ok), classificação etária, entre outros filtros.
+
+    Permitir que os usuários possam marcar títulos como favoritos ou adicionar à sua lista de interesse, facilitando a navegação e a escolha do que assistir. (ok)
 
     Permitir que os usuários possam avaliar e escrever críticas sobre os títulos, bem como visualizar as avaliações e críticas de outros usuários.
 
