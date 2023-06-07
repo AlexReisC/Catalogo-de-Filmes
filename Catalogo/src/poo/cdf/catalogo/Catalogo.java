@@ -52,26 +52,6 @@ public class Catalogo{
         }
     }
     // --------------------
-
-    // Buscar um midia especifico e obter suas informações
-    public void pesquisarMidia(String titulo){
-        boolean achou = false;
-        if(midias.isEmpty()){
-            System.out.println("Catalogo vazio.");
-        } else{
-            
-            for (Midia midia : midias) {
-                if (midia.getTitulo() == titulo) {
-                    midia.getInformacoes();
-                    achou = true;
-                }
-            }
-        }
-        if(achou == false){
-            System.out.println("Midia não encontrada!");
-        }
-    }
-    // ----------------------
     
     // Rankear as midias com as melhores avaliacoes
     public void rank(){
@@ -88,40 +68,7 @@ public class Catalogo{
     }
     //-------------------
 
-    // Listar midias por genero
-    public void pesquisarPorGenero(String genero){
-        System.out.println("\n-----------------");
-        System.out.println("Midias no catalogo do genero " + genero + ":");
-        int achou = 0;
-        for (Midia m : midias) {
-            if(m.getGenero() == genero){
-                System.out.println(m.getTitulo() + " (" + m.getAnoDeEstreia() + ")");
-                achou++;
-            }
-        }
-        if(achou == 0){
-            System.out.println("Nenhuma midia encontrada com esse genero.");
-        }
-        System.out.println("-----------------\n");
-    }
-    // ---------------------
-
-    public void pesquisarPorAnoDeEstreia(int ano){
-        System.out.println("\n-----------------");
-        System.out.println("Midias no catalogo do ano de " + ano + ":");
-        int achou = 0;
-        for (Midia m : midias) {
-            if(m.getAnoDeEstreia() == ano){
-                System.out.println(m.getTitulo());
-                achou++;
-            }
-        }
-        if(achou == 0){
-            System.out.println("Nenhuma midia encontrada.");
-        }
-        System.out.println("-----------------\n");
-    }
-
+    
     public List<Midia> getLista(){
         return midias;
     }

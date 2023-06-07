@@ -1,7 +1,6 @@
 package poo.cdf.catalogo;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import poo.cdf.midia.*;
 
@@ -66,9 +65,10 @@ public class Usuario {
             System.out.println(midia.getTitulo());
         }
     }
+    // ----------------
 
     // Buscar uma midia especifica e obter suas informações
-    public void pesquisarMidia(String titulo, ArrayList<Midia> midias){
+    public void pesquisarTitulo(String titulo, ArrayList<Midia> midias){
         boolean achou = false;
         if(midias.isEmpty()){
             System.out.println("Catalogo vazio.");
@@ -87,15 +87,15 @@ public class Usuario {
 
     public void pesquisarPorAnoDeEstreia(int ano, ArrayList<Midia> midias){
         System.out.println("\n-----------------");
-        System.out.println("Midias no catalogo do ano de " + ano + ":");
-        int achou = 0;
+        System.out.println("Midias no catalogo do ano " + ano + ":");
+        boolean achou = false;
         for (Midia m : midias) {
             if(m.getAnoDeEstreia() == ano){
                 System.out.println(m.getTitulo());
-                achou++;
+                achou = true;
             }
         }
-        if(achou == 0){
+        if(achou == false){
             System.out.println("Nenhuma midia encontrada.");
         }
         System.out.println("-----------------\n");
@@ -104,22 +104,41 @@ public class Usuario {
     public void pesquisarPorGenero(String genero, ArrayList<Midia> midias){
         System.out.println("\n-----------------");
         System.out.println("Midias no catalogo do genero " + genero + ":");
-        int achou = 0;
+        boolean achou = false;
         for (Midia m : midias) {
             if(m.getGenero() == genero){
                 System.out.println(m.getTitulo() + " (" + m.getAnoDeEstreia() + ")");
-                achou++;
+                achou = true;
             }
         }
-        if(achou == 0){
+        if(achou == false){
             System.out.println("Nenhuma midia encontrada com esse genero.");
         }
         System.out.println("-----------------\n");
     }
 
-    // Avaliar
-    
+    public void pesquisarPorClassificao(int idade, ArrayList<Midia> midias){
+        System.out.println("\n-----------------");
+        System.out.println("Midias no catalogo de classificação indicativa de " + idade + ":");
+        boolean achou = false;
+        for (Midia m : midias) {
+            if(m.getClassificacaoEtaria() == idade){
+                System.out.println(m.getTitulo() + " (" + m.getAnoDeEstreia() + ")");
+                achou = true;
+            }
+        }
+        if(achou == false){
+            System.out.println("Nenhuma midia encontrada com esse genero.");
+        }
+        System.out.println("-----------------\n");
+    }
+    // ---------------------
 
+    // Avaliar
+    public void avaliar(){
+
+    }
+    
     /* Permitir que os usuários possam pesquisar por filmes e séries utilizando palavras-chave, gênero (ok), ano de lançamento(ok), classificação etária, entre outros filtros.
 
     Permitir que os usuários possam marcar títulos como favoritos ou adicionar à sua lista de interesse, facilitando a navegação e a escolha do que assistir. (ok)
