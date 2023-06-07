@@ -7,6 +7,7 @@ public abstract class Midia{
     protected String diretor;
     protected String genero;
     protected double avaliacao;
+    protected int classificacaoEtaria;
 
     // Remover avaliacao do construtor, criar um metodo pro usuario avaliar a midia
 
@@ -62,10 +63,18 @@ public abstract class Midia{
     public void setDiretor(String diretor) {
         this.diretor = diretor;
     }
+
+    public int getClassificacaoEtaria() {
+        return classificacaoEtaria;
+    }
+
+    public void setClassificacaoEtaria(int classificacaoEtaria) {
+        this.classificacaoEtaria = classificacaoEtaria;
+    }
     // ------------------------
 
     // Obter as informações sobre filme
     public void getInformacoes(){
     }
-
+    
 }

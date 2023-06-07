@@ -20,7 +20,7 @@ public class Main {
         ArrayList<Midia> midias = new ArrayList<>();
         midias.add(s1);
         Usuario u1 = new Usuario("Alex", "Alek", "123");
-        u1.pesquisarMidia("The Boys", midias);
+        u1.pesquisarTitulo("The Boys", midias);
         //c.excluirMidia(filme2);
         // c.pesquisarMidia("Vingadores: Guerra Infinita");
         /*c.ranker();
