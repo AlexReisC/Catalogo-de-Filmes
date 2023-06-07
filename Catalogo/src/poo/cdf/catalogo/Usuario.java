@@ -1,7 +1,6 @@
 package poo.cdf.catalogo;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import poo.cdf.midia.*;
 
