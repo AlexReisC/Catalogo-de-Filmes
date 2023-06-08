@@ -8,10 +8,9 @@ import poo.cdf.midia.*;
 
 public class Catalogo{
     // Lista das midias
-    public List<Midia> midias;
+    public ArrayList<Midia> midias;
     // Lista de usuarios
-    public List<Usuario> usuarios;
-    // lista de generos favoritos
+    public ArrayList<Usuario> usuarios;
 
     public Catalogo(){
         midias = new ArrayList<Midia>();
@@ -62,7 +61,7 @@ public class Catalogo{
             System.out.println("Catalogo vazio!");
         }
         for (int i = 0; i < midias.size(); i++) {
-            System.out.println((i+1) + ". " + midias.get(i).getTitulo() + " - " + midias.get(i).getAvaliacao());
+            System.out.println((i+1) + ". " + midias.get(i).getTitulo() + " - " + midias.get(i).getNota());
         }
         System.out.println("-----------------");
     }

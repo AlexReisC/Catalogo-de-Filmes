@@ -6,10 +6,9 @@ public abstract class Midia{
     protected String estudio;
     protected String diretor;
     protected String genero;
-    protected double avaliacao;
+    protected double nota;
     protected int classificacaoEtaria;
-
-    // Remover avaliacao do construtor, criar um metodo pro usuario avaliar a midia
+    protected String critica;
 
     public Midia(String titulo, int ano, String diretor, String estudio, String genero){
         this.titulo = titulo;
@@ -49,14 +48,14 @@ public abstract class Midia{
     public void setGenero(String genero) {
         this.genero = genero;
     }
-
-    public double getAvaliacao() {
-        return avaliacao;
+    
+    public double getNota() {
+        return nota;
     }
-    public void setAvaliacao(double avaliacao) {
-        this.avaliacao = avaliacao;
+    public void setNota(double nota) {
+        this.nota = nota;
     }
-
+    
     public String getDiretor() {
         return diretor;
     }
@@ -71,10 +70,16 @@ public abstract class Midia{
     public void setClassificacaoEtaria(int classificacaoEtaria) {
         this.classificacaoEtaria = classificacaoEtaria;
     }
-    // ------------------------
 
     // Obter as informações sobre filme
     public void getInformacoes(){
+    }
+
+    public String getCritica() {
+        return critica;
+    }
+    public void setCritica(String critica) {
+        this.critica = critica;
     }
     
 }

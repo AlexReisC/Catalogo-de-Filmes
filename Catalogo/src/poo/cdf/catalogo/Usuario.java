@@ -1,7 +1,7 @@
 package poo.cdf.catalogo;
 
 import java.util.ArrayList;
-
+import java.util.Scanner;
 import poo.cdf.midia.*;
 
 public class Usuario {
@@ -132,18 +132,50 @@ public class Usuario {
         }
         System.out.println("-----------------\n");
     }
+
+    public void pesquisarPalavraChave(String palavra, ArrayList<Midia> midias){
+        boolean achou = false;
+        if(midias.isEmpty()){
+            System.out.println("Catalogo vazio.");
+        } else{
+            for (Midia m : midias) {
+                if (m.getTitulo().contains(palavra)) {
+                    m.getInformacoes();
+                    achou = true;
+                }
+            }
+        }
+        if(achou == false){
+            System.out.println("Midia não encontrada!");
+        }
+    }
+
     // ---------------------
 
     // Avaliar
-    public void avaliar(){
-
+    public void avaliar(String nome, ArrayList<Midia>midias){
+        Scanner scan = new Scanner(System.in);
+        String texto;
+        double nota; 
+        for (Midia m : midias) {
+            if(m.getTitulo() == nome){
+                System.out.print("Sua critica: ");
+                texto = scan.nextLine();
+                m.setCritica(texto);
+                //scan.reset();
+                System.out.print("Sua nota: ");
+                nota = scan.nextDouble();
+                m.setNota(nota);
+            }
+        }
+        scan.close();
     }
     
     /* Permitir que os usuários possam pesquisar por filmes e séries utilizando palavras-chave, gênero (ok), ano de lançamento(ok), classificação etária, entre outros filtros.
 
     Permitir que os usuários possam marcar títulos como favoritos ou adicionar à sua lista de interesse, facilitando a navegação e a escolha do que assistir. (ok)
 
-    Permitir que os usuários possam avaliar e escrever críticas sobre os títulos, bem como visualizar as avaliações e críticas de outros usuários.
+    Permitir que os usuários possam avaliar e escrever críticas sobre os títulos, bem como visualizar as avaliações e críticas de outros usuários.(ok)
 
     Permitir que os usuários possam receber notificações sobre novos lançamentos e títulos adicionados ao catálogo de gêneros marcados como favorito. */
     
