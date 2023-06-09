@@ -50,7 +50,7 @@ public class Usuario {
         this.favoritos = favoritos;
     }
 
-    // Adicionar um favorito
+    // Adicionar um titulo aos favoritos
     public void favoritar(String nome, ArrayList<Midia> midias){
         for (Midia midia : midias) {
             if (midia.getTitulo() == nome) {
@@ -67,9 +67,8 @@ public class Usuario {
             System.out.println(midia.getTitulo());
         }
     }
-    // ----------------
 
-    // Buscar uma midia especifica e obter suas informações
+    // Buscar uma obra especifica pelo nome e obter suas informações
     public void pesquisarTitulo(String titulo, ArrayList<Midia> midias){
         boolean achou = false;
         if(midias.isEmpty()){
@@ -87,6 +86,7 @@ public class Usuario {
         }
     }
 
+    // Buscar uma obra pelo ano de estreia
     public void pesquisarPorAnoDeEstreia(int ano, ArrayList<Midia> midias){
         System.out.println("\n-----------------");
         System.out.println("Midias no catalogo do ano " + ano + ":");
@@ -103,6 +103,7 @@ public class Usuario {
         System.out.println("-----------------\n");
     }
 
+    // Buscar uma obra por um genero especifico
     public void pesquisarPorGenero(String genero, ArrayList<Midia> midias){
         System.out.println("\n-----------------");
         System.out.println("Midias no catalogo do genero " + genero + ":");
@@ -119,6 +120,7 @@ public class Usuario {
         System.out.println("-----------------\n");
     }
 
+    // Buscar uma obra pela classificacao etaria
     public void pesquisarPorClassificao(int idade, ArrayList<Midia> midias){
         System.out.println("\n-----------------");
         System.out.println("Midias no catalogo de classificação indicativa de " + idade + ":");
@@ -135,6 +137,7 @@ public class Usuario {
         System.out.println("-----------------\n");
     }
 
+    // Buscar uma obra por uma plavra chave
     public void pesquisarPalavraChave(String palavra, ArrayList<Midia> midias){
         boolean achou = false;
         if(midias.isEmpty()){
@@ -152,9 +155,9 @@ public class Usuario {
         }
     }
 
-    // ---------------------
+    // -----------------------
 
-    // Avaliar
+    // Avaliar uma obra especifica
     public void avaliar(String nome, ArrayList<Midia>midias){
         Scanner scan = new Scanner(System.in);
         String texto;

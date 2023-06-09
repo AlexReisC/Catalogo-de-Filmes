@@ -45,10 +45,10 @@ public class Administrador {
 
         System.out.print("Titulo: ");
         m.setTitulo(scan.nextLine());
-        System.out.print("Estudio: ");
-        m.setEstudio(scan.nextLine());
         System.out.println("Genero: ");
         m.setGenero(scan.nextLine());
+        System.out.print("Estudio: ");
+        m.setEstudio(scan.nextLine());
         System.out.print("Ano de Lançamento: ");
         m.setAnoDeEstreia(scan.nextInt());
         System.out.print("Classificação etária: ");
@@ -58,8 +58,8 @@ public class Administrador {
         scan.close();
     }
 
-    // Remover um midia do catalogo
-    public void excluirMidia(Midia m, ArrayList<Midia> midias){
+    // Remover um titulo do catalogo
+    public void removerrMidia(Midia m, ArrayList<Midia> midias){
         if(midias.isEmpty()){
             System.out.println("Catalogo de midias vazio!");
         } else{

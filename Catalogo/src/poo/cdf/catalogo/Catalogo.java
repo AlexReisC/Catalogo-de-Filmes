@@ -6,7 +6,7 @@ import java.util.Collections;
 import poo.cdf.midia.*;
 
 public class Catalogo{
-    // Lista das midias
+    // Lista dos titulos do tipo Midia
     public ArrayList<Midia> midias;
     // Lista de usuarios
     public ArrayList<Usuario> usuarios;
@@ -58,8 +58,5 @@ public class Catalogo{
     // Mostrar as avaliacoes dde cada titulo
 
     /* FUNCIONALIDADES
-    Permitir que os administradores do sistema possam cadastrar novos títulos, incluindo informações como nome, sinopse, elenco, diretor, gênero, classificação, entre outras informações relevantes.
-
-    Permitir que os usuários possam receber notificações sobre novos lançamentos e títulos adicionados ao catálogo de gêneros marcados como favorito.
- */
+    Permitir que os usuários possam receber notificações sobre novos lançamentos e títulos adicionados ao catálogo de gêneros marcados como favorito. */
 }
