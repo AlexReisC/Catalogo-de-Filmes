@@ -4,12 +4,14 @@ public abstract class Midia{
     protected String titulo;
     protected int anoDeEstreia;
     protected String estudio;
+    protected String diretor;
     protected String genero;
     protected double nota;
     protected int classificacaoEtaria;
     protected String critica;
 
     public Midia(){
+
     }
 
     // gets e setters dos atributos:
@@ -67,6 +69,14 @@ public abstract class Midia{
     }
     public void setCritica(String critica) {
         this.critica = critica;
+    }
+
+    public String getDiretor() {
+        return diretor;
+    }
+
+    public void setDiretor(String diretor) {
+        this.diretor = diretor;
     }
     
 }

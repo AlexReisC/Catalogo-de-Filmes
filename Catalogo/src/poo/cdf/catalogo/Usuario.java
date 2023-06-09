@@ -61,12 +61,12 @@ public class Usuario {
     }
 
     // Listar favoritos
-    public void listarFavoritos(){
+    /* public void listarFavoritos(){
         System.out.println("*   FAVORITOS   *");
         for (Midia midia : favoritos) {
             System.out.println(midia.getTitulo());
         }
-    }
+    } */
 
     // Buscar uma obra especifica pelo nome e obter suas informações
     public void pesquisarTitulo(String titulo, ArrayList<Midia> midias){
@@ -177,5 +177,19 @@ public class Usuario {
     }
     
     /* Permitir que os usuários possam receber notificações sobre novos lançamentos e títulos adicionados ao catálogo de gêneros marcados como favorito. */
-    
+
+    public void cadastrar(ArrayList<Usuario> u, String login, String senha){
+        this.login = login;
+        this.senha = senha;
+        u.add(this);
+    }
+
+    public void login(Catalogo catalogo, String login, String senha){
+        if(this.login == login && this.senha == senha){
+            System.out.println("Login realizado");
+        } else{
+            System.out.println("Login ou senha incorretos. Tente novamente.");
+        }
+    }
+
 }

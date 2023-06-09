@@ -17,7 +17,7 @@ public class Catalogo{
     }
     
     // Listar todas as midias presentes
-    public void listarMidias(){
+    public void listarObras(){
         System.out.println("\n-----------------");
         System.out.println("Midias no catalogo:");
         if(midias.isEmpty()){
@@ -29,7 +29,7 @@ public class Catalogo{
         }
         System.out.println("-----------------\n");
     }
-    // --------------------
+    // ------------------
     
     // Rankear as midias com as melhores avaliacoes
     public void rank(){
@@ -47,16 +47,11 @@ public class Catalogo{
     //-------------------
 
     // Lista de usuarios: login e senha
-    /* public void Logar(Usuario usuario){
+    public void listarUsuarios(){
+        System.out.println("\n----- Usuarios -----");
         for (Usuario u : usuarios) {
-            if(u.getLogin().equals(usuario.getLogin()) && u.getSenha().equals(usuario.getSenha())){
-                usuario.midias = getLista();
-            }
+            System.out.println(u.getLogin());
         }
-    } */
-
-    // Mostrar as avaliacoes dde cada titulo
-
-    /* FUNCIONALIDADES
-    Permitir que os usuários possam receber notificações sobre novos lançamentos e títulos adicionados ao catálogo de gêneros marcados como favorito. */
+    }
+    
 }

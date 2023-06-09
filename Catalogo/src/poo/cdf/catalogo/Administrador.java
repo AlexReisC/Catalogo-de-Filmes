@@ -49,11 +49,13 @@ public class Administrador {
         m.setGenero(scan.nextLine());
         System.out.print("Estudio: ");
         m.setEstudio(scan.nextLine());
+        System.out.println("Diretor: ");
+        m.setDiretor(scan.nextLine());
         System.out.print("Ano de Lançamento: ");
         m.setAnoDeEstreia(scan.nextInt());
         System.out.print("Classificação etária: ");
         m.setClassificacaoEtaria(scan.nextInt());
-        
+
         midias.add(m);
         scan.close();
     }
