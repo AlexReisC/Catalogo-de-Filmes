@@ -30,18 +30,6 @@ public class Catalogo{
         System.out.println("-----------------\n");
     }
     // --------------------
-
-    // Remover um midia do catalogo
-    // ADMINISTRADOR
-    public void excluirMidia(Midia m){
-        if(midias.isEmpty()){
-            System.out.println("Catalogo de midias vazio!");
-        } else{
-            midias.remove(m);
-            System.out.println(m.getTitulo() + " foi removido.");
-        }
-    }
-    // --------------------
     
     // Rankear as midias com as melhores avaliacoes
     public void rank(){
@@ -66,6 +54,8 @@ public class Catalogo{
             }
         }
     } */
+
+    // Mostrar as avaliacoes dde cada titulo
 
     /* FUNCIONALIDADES
     Permitir que os administradores do sistema possam cadastrar novos títulos, incluindo informações como nome, sinopse, elenco, diretor, gênero, classificação, entre outras informações relevantes.

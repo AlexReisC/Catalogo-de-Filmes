@@ -158,7 +158,8 @@ public class Usuario {
     public void avaliar(String nome, ArrayList<Midia>midias){
         Scanner scan = new Scanner(System.in);
         String texto;
-        double nota; 
+        double nota;
+        System.out.println("--- Avaliar obra ---");
         for (Midia m : midias) {
             if(m.getTitulo() == nome){
                 System.out.print("Sua critica: ");

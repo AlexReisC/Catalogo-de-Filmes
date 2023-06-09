@@ -2,6 +2,7 @@ package poo.cdf.catalogo;
 
 import poo.cdf.midia.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Administrador {
     private String nome;
@@ -40,10 +41,31 @@ public class Administrador {
 
     // Adicionar um titulo ao catalogo
     public void adicionarMidia(Midia m, ArrayList<Midia> midias){
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Titulo: ");
+        m.setTitulo(scan.nextLine());
+        System.out.print("Estudio: ");
+        m.setEstudio(scan.nextLine());
+        System.out.println("Genero: ");
+        m.setGenero(scan.nextLine());
+        System.out.print("Ano de Lançamento: ");
+        m.setAnoDeEstreia(scan.nextInt());
+        System.out.print("Classificação etária: ");
+        m.setClassificacaoEtaria(scan.nextInt());
+        
         midias.add(m);
+        scan.close();
     }
 
+    // Remover um midia do catalogo
+    public void excluirMidia(Midia m, ArrayList<Midia> midias){
+        if(midias.isEmpty()){
+            System.out.println("Catalogo de midias vazio!");
+        } else{
+            midias.remove(m);
+            System.out.println(m.getTitulo() + " foi removido.");
+        }
+    }
     
-
-    // Permitir que os administradores do sistema possam cadastrar novos títulos, incluindo informações como nome, sinopse, elenco, diretor, gênero, classificação, entre outras informações relevantes.
 }
