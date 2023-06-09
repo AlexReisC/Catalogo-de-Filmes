@@ -1,7 +1,6 @@
 package poo.cdf.catalogo;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Collections;
 
 import poo.cdf.midia.*;
@@ -16,14 +15,6 @@ public class Catalogo{
         midias = new ArrayList<Midia>();
         usuarios = new ArrayList<Usuario>();
     }
-
-    // Adicionar uma midia ao catalogo
-    // ADMINISTRADOR
-    public void adicionarMidia(Midia m){
-        // verificar se é o administrador
-        midias.add(m);
-    }
-    // -------------------
     
     // Listar todas as midias presentes
     public void listarMidias(){
@@ -67,11 +58,6 @@ public class Catalogo{
     }
     //-------------------
 
-    
-    public List<Midia> getLista(){
-        return midias;
-    }
-
     // Lista de usuarios: login e senha
     /* public void Logar(Usuario usuario){
         for (Usuario u : usuarios) {
@@ -82,15 +68,8 @@ public class Catalogo{
     } */
 
     /* FUNCIONALIDADES
-    Permitir que os usuários possam pesquisar por filmes e séries utilizando palavras-chave, gênero, ano de lançamento, classificação etária, entre outros filtros.
-
     Permitir que os administradores do sistema possam cadastrar novos títulos, incluindo informações como nome, sinopse, elenco, diretor, gênero, classificação, entre outras informações relevantes.
 
-    Permitir que os usuários possam marcar títulos como favoritos ou adicionar à sua lista de interesse, facilitando a navegação e a escolha do que assistir.
-
-    Permitir que os usuários possam avaliar e escrever críticas sobre os títulos, bem como visualizar as avaliações e críticas de outros usuários.
-
     Permitir que os usuários possam receber notificações sobre novos lançamentos e títulos adicionados ao catálogo de gêneros marcados como favorito.
-
  */
 }

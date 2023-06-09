@@ -5,6 +5,8 @@ import java.util.Scanner;
 import poo.cdf.midia.*;
 
 public class Usuario {
+    // ideia: metodo login e metodo cadastrar
+    // metodo cadastrar modifica o login e a senha do usuario. (remova-os do construtor)
     private String nome;
     private String login;
     private String senha;
@@ -162,7 +164,6 @@ public class Usuario {
                 System.out.print("Sua critica: ");
                 texto = scan.nextLine();
                 m.setCritica(texto);
-                //scan.reset();
                 System.out.print("Sua nota: ");
                 nota = scan.nextDouble();
                 m.setNota(nota);
@@ -171,12 +172,6 @@ public class Usuario {
         scan.close();
     }
     
-    /* Permitir que os usuários possam pesquisar por filmes e séries utilizando palavras-chave, gênero (ok), ano de lançamento(ok), classificação etária, entre outros filtros.
-
-    Permitir que os usuários possam marcar títulos como favoritos ou adicionar à sua lista de interesse, facilitando a navegação e a escolha do que assistir. (ok)
-
-    Permitir que os usuários possam avaliar e escrever críticas sobre os títulos, bem como visualizar as avaliações e críticas de outros usuários.(ok)
-
-    Permitir que os usuários possam receber notificações sobre novos lançamentos e títulos adicionados ao catálogo de gêneros marcados como favorito. */
+    /* Permitir que os usuários possam receber notificações sobre novos lançamentos e títulos adicionados ao catálogo de gêneros marcados como favorito. */
     
 }
