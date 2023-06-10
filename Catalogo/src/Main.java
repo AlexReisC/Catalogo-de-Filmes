@@ -10,16 +10,14 @@ public class Main {
         Serie s1 = new Serie();
 
         Administrador adm = new Administrador("Alex", "Alek", "1234");
-        /* adm.adicionarMidia(filme2, c.midias);
-        adm.adicionarMidia(filme1, c.midias); */
+        adm.adicionarMidia(filme2, c.midias);
+        adm.adicionarMidia(filme1, c.midias);
         adm.adicionarMidia(s1, c.midias);
         //c.listarMidias();
 
         Usuario u1 = new Usuario("Alex", "Alek", "123");
-        /* u1.pesquisarTitulo("The Boys", c.midias);
         u1.pesquisarPorAnoDeEstreia(2008, c.midias);
-        u1.pesquisarPalavraChave("Infinita", c.midias); */
-        //u1.avaliar("Homem de Ferro", c.midias);
-        s1.getInformacoes();
+        u1.pesquisarPalavraChave("Infinita", c.midias);
+        u1.avaliar("Homem de Ferro", c.midias);
     }
 }

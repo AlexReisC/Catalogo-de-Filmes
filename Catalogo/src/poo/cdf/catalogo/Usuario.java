@@ -66,24 +66,6 @@ public class Usuario {
         }
     }
 
-    // Buscar uma obra especifica pelo nome e obter suas informações
-    public void pesquisarTitulo(String titulo, ArrayList<Midia> midias){
-        boolean achou = false;
-        if(midias.isEmpty()){
-            System.out.println("Catalogo vazio.");
-        } else{
-            for (Midia midia : midias) {
-                if (midia.getTitulo() == titulo) {
-                    midia.getInformacoes();
-                    achou = true;
-                }
-            }
-        }
-        if(achou == false){
-            System.out.println("Midia não encontrada!");
-        }
-    }
-
     // Buscar uma obra pelo ano de estreia
     public void pesquisarPorAnoDeEstreia(int ano, ArrayList<Midia> midias){
         System.out.println("\n-----------------");

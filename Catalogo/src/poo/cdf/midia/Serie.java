@@ -3,9 +3,11 @@ package poo.cdf.midia;
 public class Serie extends Midia {
     private int temporadas;
     private int episodios;
-    // Ideia: matriz de temporadas e episodios  
+    // Ideia: matriz de temporadas e episodios
 
-    public Serie() {}
+    public Serie() {
+
+    }
 
     @Override
     public void getInformacoes() {

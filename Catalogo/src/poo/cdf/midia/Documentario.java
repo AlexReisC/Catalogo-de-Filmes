@@ -2,7 +2,9 @@ package poo.cdf.midia;
 
 public class Documentario extends Midia{
 
-    public Documentario(){}
+    public Documentario(){
+        
+    }
 
     @Override
     public void getInformacoes() {
