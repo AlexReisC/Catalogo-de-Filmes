@@ -8,10 +8,11 @@ public class Usuario {
     private String nome;
     private String login;
     private String senha;
-    private ArrayList<Midia> favoritos = new ArrayList<>();
+    private ArrayList<Midia> favoritos;
 
     public Usuario(String nome){
         this.nome = nome;
+        favoritos = new ArrayList<>();
     }
 
     public String getNome() {
@@ -49,18 +50,18 @@ public class Usuario {
     // Adicionar um titulo aos favoritos
     public void favoritar(String nome, ArrayList<Midia> midias){
         for (Midia midia : midias) {
-            if (midia.getTitulo() == nome) {
+            if (midia.getTitulo().equals(nome)) {
                 favoritos.add(midia);
+                System.out.println("Adicionado aos favoritos!");
             }
         }
-        System.out.println("Adicionado aos favoritos!");
     }
 
     // Listar favoritos
     public void listarFavoritos(){
         System.out.println("*   FAVORITOS   *");
-        for (Midia midia : favoritos) {
-            System.out.println(midia.getTitulo());
+        for (Midia m : favoritos) {
+            System.out.println(m.getTitulo());
         }
     }
 
@@ -87,21 +88,20 @@ public class Usuario {
         System.out.println("Midias no catalogo do genero " + genero + ":");
         boolean achou = false;
         for (Midia m : midias) {
-            if(m.getGenero() == genero){
+            if(m.getGenero().equals(genero)){
                 System.out.println(m.getTitulo() + " (" + m.getAnoDeEstreia() + ")");
                 achou = true;
             }
         }
         if(achou == false){
-            System.out.println("Nenhuma obra encontrada.");
+            System.out.println("Nenhuma obra encontrada.\n-----------------");
         }
-        System.out.println("-----------------\n");
     }
 
     // Buscar uma obra pela classificacao etaria
     public void pesquisarPorClassificao(int idade, ArrayList<Midia> midias){
         System.out.println("\n-----------------");
-        System.out.println("Midias no catalogo de classificação indicativa de " + idade + ":");
+        System.out.println("Midias no catalogo com classificação indicativa de " + idade + ":");
         boolean achou = false;
         for (Midia m : midias) {
             if(m.getClassificacaoEtaria() == idade){
@@ -112,17 +112,17 @@ public class Usuario {
         if(achou == false){
             System.out.println("Nenhuma obra encontrada.");
         }
-        System.out.println("-----------------\n");
+        System.out.println("-----------------");
     }
 
     // Buscar uma obra por uma plavra chave
     public void pesquisarPalavraChave(String palavra, ArrayList<Midia> midias){
         System.out.println("\n-----------------");
-        System.out.println("Midias no catalogo: ");
+        System.out.println("Midias relacionadas no catalogo: ");
         boolean achou = false;
         for (Midia m : midias) {
             if (m.getTitulo().contains(palavra)) {
-                m.getInformacoes();
+                System.out.println(m.getTitulo() + " (" + m.getAnoDeEstreia() + ")");
                 achou = true;
                 }
             }
@@ -130,28 +130,21 @@ public class Usuario {
         if(achou == false){
             System.out.println("Nenhuma obra encontrada.");
         }
+        System.out.println("----------------");
     }
 
     // -----------------------
 
     // Avaliar uma obra especifica
-    public void avaliar(String nome, ArrayList<Midia>midias){
+    public void avaliar(Midia m, ArrayList<Midia>midias){
         Scanner scan = new Scanner(System.in);
-        String texto;
-        double nota;
-        System.out.println("--- Avaliar obra ---");
-        for (Midia m : midias) {
-            if(m.getTitulo() == nome){
-                System.out.print("Sua critica: ");
-                texto = scan.nextLine();
-                m.setCritica(texto);
-                System.out.print("Sua nota: ");
-                nota = scan.nextDouble();
-                m.setNota(nota);
-            } else{
-                System.out.println("Midia não encontrada.");
-            }
-        }
+        System.out.println("\n--- Avaliar obra ---");
+        
+        System.out.println("Critica: ");
+        m.setCritica(scan.nextLine());
+        System.out.println("Nota: ");
+        m.setNota(scan.nextDouble());
+
         scan.close();
     }
 
