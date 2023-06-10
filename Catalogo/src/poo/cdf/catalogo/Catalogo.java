@@ -46,7 +46,7 @@ public class Catalogo{
     }
     //-------------------
 
-    // Lista de usuarios: login e senha
+    // Listar usuarios: login
     public void listarUsuarios(){
         System.out.println("\n----- Usuarios -----");
         for (Usuario u : usuarios) {

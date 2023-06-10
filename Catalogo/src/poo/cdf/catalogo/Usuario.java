@@ -5,8 +5,6 @@ import java.util.Scanner;
 import poo.cdf.midia.*;
 
 public class Usuario {
-    // ideia: metodo login e metodo cadastrar
-    // metodo cadastrar modifica o login e a senha do usuario. (remova-os do construtor)
     private String nome;
     private String login;
     private String senha;
@@ -61,12 +59,12 @@ public class Usuario {
     }
 
     // Listar favoritos
-    /* public void listarFavoritos(){
+    public void listarFavoritos(){
         System.out.println("*   FAVORITOS   *");
         for (Midia midia : favoritos) {
             System.out.println(midia.getTitulo());
         }
-    } */
+    }
 
     // Buscar uma obra especifica pelo nome e obter suas informações
     public void pesquisarTitulo(String titulo, ArrayList<Midia> midias){
@@ -175,15 +173,15 @@ public class Usuario {
         }
         scan.close();
     }
-    
-    /* Permitir que os usuários possam receber notificações sobre novos lançamentos e títulos adicionados ao catálogo de gêneros marcados como favorito. */
 
+    // Usuario se cadastrar no catalogo
     public void cadastrar(ArrayList<Usuario> u, String login, String senha){
         this.login = login;
         this.senha = senha;
         u.add(this);
     }
 
+    // Usuario faz login no catalogo
     public void login(Catalogo catalogo, String login, String senha){
         if(this.login == login && this.senha == senha){
             System.out.println("Login realizado");
