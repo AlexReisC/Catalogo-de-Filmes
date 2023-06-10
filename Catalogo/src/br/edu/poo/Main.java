@@ -1,3 +1,4 @@
+package poo.cdf;
 import poo.cdf.catalogo.*;
 import poo.cdf.midia.*;
 
