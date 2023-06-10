@@ -1,4 +1,4 @@
-package poo.cdf.midia;
+package poo.midia;
 
 import java.util.Comparator;
 

@@ -1,8 +1,8 @@
-package poo.cdf.catalogo;
+package poo.catalogo;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import poo.cdf.midia.*;
+import poo.midia.*;
 
 public class Usuario {
     private String nome;
@@ -10,10 +10,8 @@ public class Usuario {
     private String senha;
     private ArrayList<Midia> favoritos = new ArrayList<>();
 
-    public Usuario(String nome, String login, String senha){
+    public Usuario(String nome){
         this.nome = nome;
-        this.login = login;
-        this.senha = senha;
     }
 
     public String getNome() {
@@ -78,9 +76,9 @@ public class Usuario {
             }
         }
         if(achou == false){
-            System.out.println("Nenhuma midia encontrada.");
+            System.out.println("Nenhuma obra encontrada.");
         }
-        System.out.println("-----------------\n");
+        System.out.println("-----------------");
     }
 
     // Buscar uma obra por um genero especifico
@@ -95,7 +93,7 @@ public class Usuario {
             }
         }
         if(achou == false){
-            System.out.println("Nenhuma midia encontrada com esse genero.");
+            System.out.println("Nenhuma obra encontrada.");
         }
         System.out.println("-----------------\n");
     }
@@ -112,26 +110,25 @@ public class Usuario {
             }
         }
         if(achou == false){
-            System.out.println("Nenhuma midia encontrada com esse genero.");
+            System.out.println("Nenhuma obra encontrada.");
         }
         System.out.println("-----------------\n");
     }
 
     // Buscar uma obra por uma plavra chave
     public void pesquisarPalavraChave(String palavra, ArrayList<Midia> midias){
+        System.out.println("\n-----------------");
+        System.out.println("Midias no catalogo: ");
         boolean achou = false;
-        if(midias.isEmpty()){
-            System.out.println("Catalogo vazio.");
-        } else{
-            for (Midia m : midias) {
-                if (m.getTitulo().contains(palavra)) {
-                    m.getInformacoes();
-                    achou = true;
+        for (Midia m : midias) {
+            if (m.getTitulo().contains(palavra)) {
+                m.getInformacoes();
+                achou = true;
                 }
             }
-        }
+
         if(achou == false){
-            System.out.println("Midia não encontrada!");
+            System.out.println("Nenhuma obra encontrada.");
         }
     }
 
@@ -151,6 +148,8 @@ public class Usuario {
                 System.out.print("Sua nota: ");
                 nota = scan.nextDouble();
                 m.setNota(nota);
+            } else{
+                System.out.println("Midia não encontrada.");
             }
         }
         scan.close();

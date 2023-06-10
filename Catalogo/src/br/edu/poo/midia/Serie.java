@@ -1,4 +1,4 @@
-package poo.cdf.midia;
+package poo.midia;
 
 public class Serie extends Midia {
     private int temporadas;

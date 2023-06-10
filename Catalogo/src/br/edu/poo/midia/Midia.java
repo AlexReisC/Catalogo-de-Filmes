@@ -1,4 +1,4 @@
-package poo.cdf.midia;
+package poo.midia;
 
 public abstract class Midia{
     protected String titulo;

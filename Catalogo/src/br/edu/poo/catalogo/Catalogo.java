@@ -1,9 +1,9 @@
-package poo.cdf.catalogo;
+package poo.catalogo;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-import poo.cdf.midia.*;
+import poo.midia.*;
 
 public class Catalogo{
     // Lista dos titulos do tipo Midia

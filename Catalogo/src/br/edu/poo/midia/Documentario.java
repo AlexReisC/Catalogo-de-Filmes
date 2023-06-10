@@ -1,4 +1,4 @@
-package poo.cdf.midia;
+package poo.midia;
 
 public class Documentario extends Midia{
 

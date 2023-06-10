@@ -1,6 +1,6 @@
-package poo.cdf.catalogo;
+package poo.catalogo;
 
-import poo.cdf.midia.*;
+import poo.midia.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -45,11 +45,11 @@ public class Administrador {
 
         System.out.print("Titulo: ");
         m.setTitulo(scan.nextLine());
-        System.out.println("Genero: ");
+        System.out.print("Genero: ");
         m.setGenero(scan.nextLine());
         System.out.print("Estudio: ");
         m.setEstudio(scan.nextLine());
-        System.out.println("Diretor: ");
+        System.out.print("Diretor: ");
         m.setDiretor(scan.nextLine());
         System.out.print("Ano de Lançamento: ");
         m.setAnoDeEstreia(scan.nextInt());
