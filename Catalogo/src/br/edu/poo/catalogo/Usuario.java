@@ -49,88 +49,109 @@ public class Usuario {
 
     // Adicionar um titulo aos favoritos
     public void favoritar(String nome, ArrayList<Midia> midias){
+        boolean achou = false;
         for (Midia midia : midias) {
             if (midia.getTitulo().equals(nome)) {
                 favoritos.add(midia);
+                achou = true;
                 System.out.println("Adicionado aos favoritos!");
             }
+        }
+        if (!achou) {
+            System.out.println("Obra não encontrada :(");
         }
     }
 
     // Listar favoritos
     public void listarFavoritos(){
-        System.out.println("*   FAVORITOS   *");
-        for (Midia m : favoritos) {
-            System.out.println(m.getTitulo());
+        if(favoritos.isEmpty()){
+            System.out.println("Você ainda não adicionou nenhum favorito");
+        } else{
+            System.out.println("*   FAVORITOS   *");
+            for (Midia m : favoritos) {
+                System.out.println(m.getTitulo());
+            }
         }
     }
 
     // Buscar uma obra pelo ano de estreia
     public void pesquisarPorAnoDeEstreia(int ano, ArrayList<Midia> midias){
-        System.out.println("\n-----------------");
-        System.out.println("Midias no catalogo do ano " + ano + ":");
         boolean achou = false;
-        for (Midia m : midias) {
-            if(m.getAnoDeEstreia() == ano){
-                System.out.println(m.getTitulo());
-                achou = true;
+        if (midias.isEmpty()) {
+            System.out.println("Catalogo vazio T_T");
+        } else {
+            System.out.println("\n-----------------\nObras do ano " + ano + ":");
+
+            for (Midia m : midias) {
+                if (m.getAnoDeEstreia() == ano) {
+                    System.out.println(m.getTitulo());
+                    achou = true;
+                }
             }
         }
-        if(achou == false){
-            System.out.println("Nenhuma obra encontrada.");
+        if(!achou){
+            System.out.println("Nenhuma obra encontrada.\n-----------------");
         }
-        System.out.println("-----------------");
     }
 
     // Buscar uma obra por um genero especifico
     public void pesquisarPorGenero(String genero, ArrayList<Midia> midias){
-        System.out.println("\n-----------------");
-        System.out.println("Midias no catalogo do genero " + genero + ":");
         boolean achou = false;
-        for (Midia m : midias) {
-            if(m.getGenero().equals(genero)){
-                System.out.println(m.getTitulo() + " (" + m.getAnoDeEstreia() + ")");
-                achou = true;
+        if(midias.isEmpty()){
+            System.out.println("Catalogo vazio T_T");
+        }else{
+            System.out.println("\n-----------------\nObras do genero " + genero + ":");
+
+            for (Midia m : midias) {
+                if (m.getGenero().equals(genero)) {
+                    System.out.println(m.getTitulo() + " (" + m.getAnoDeEstreia() + ")");
+                    achou = true;
+                }
             }
         }
-        if(achou == false){
+        if(!achou){
             System.out.println("Nenhuma obra encontrada.\n-----------------");
         }
     }
 
     // Buscar uma obra pela classificacao etaria
     public void pesquisarPorClassificao(int idade, ArrayList<Midia> midias){
-        System.out.println("\n-----------------");
-        System.out.println("Midias no catalogo com classificação indicativa de " + idade + ":");
         boolean achou = false;
-        for (Midia m : midias) {
-            if(m.getClassificacaoEtaria() == idade){
-                System.out.println(m.getTitulo() + " (" + m.getAnoDeEstreia() + ")");
-                achou = true;
+        if (midias.isEmpty()) {
+            System.out.println("Catalogo vazio T_T");
+        } else {
+            System.out.println("\n-----------------\nObras com classificação indicativa de " + idade + ":");
+
+            for (Midia m : midias) {
+                if (m.getClassificacaoEtaria() == idade) {
+                    System.out.println(m.getTitulo() + " (" + m.getAnoDeEstreia() + ")");
+                    achou = true;
+                }
             }
         }
-        if(achou == false){
-            System.out.println("Nenhuma obra encontrada.");
+        if(!achou){
+            System.out.println("Nenhuma obra encontrada.\n-----------------");
         }
-        System.out.println("-----------------");
     }
 
     // Buscar uma obra por uma plavra chave
     public void pesquisarPalavraChave(String palavra, ArrayList<Midia> midias){
-        System.out.println("\n-----------------");
-        System.out.println("Midias relacionadas no catalogo: ");
         boolean achou = false;
-        for (Midia m : midias) {
-            if (m.getTitulo().contains(palavra)) {
-                System.out.println(m.getTitulo() + " (" + m.getAnoDeEstreia() + ")");
-                achou = true;
+        if (midias.isEmpty()) {
+            System.out.println("Catalogo vazio T_T");
+        } else {
+            System.out.println("\n-----------------\nObras encontradas: ");
+            for (Midia m : midias) {
+                if (m.getTitulo().contains(palavra)) {
+                    System.out.println(m.getTitulo() + " (" + m.getAnoDeEstreia() + ")");
+                    achou = true;
                 }
             }
-
-        if(achou == false){
-            System.out.println("Nenhuma obra encontrada.");
         }
-        System.out.println("----------------");
+        
+        if(!achou){
+            System.out.println("Nenhuma obra encontrada.\n----------------");
+        }
     }
 
     // -----------------------
@@ -144,6 +165,7 @@ public class Usuario {
         m.setCritica(scan.nextLine());
         System.out.println("Nota: ");
         m.setNota(scan.nextDouble());
+        scan.nextLine();
 
         scan.close();
     }
