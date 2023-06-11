@@ -18,16 +18,15 @@ public class Catalogo{
     
     // Listar todas as midias presentes
     public void listarObras(){
-        System.out.println("\n-----------------");
-        System.out.println("Midias no catalogo:");
-        if(midias.isEmpty()){
-            System.out.println("Catalogo vazio!");
-        }else{
+        if (midias.isEmpty()) {
+            System.out.println("Catalogo vazio T_T");
+        } else{
+            System.out.println("\n-----------------\nObras no catalogo:");
             for (Midia m : midias) {
                 System.out.println(m.getTitulo() + " (" + m.getAnoDeEstreia() + ")");
             }
         }
-        System.out.println("-----------------\n");
+        System.out.println("-----------------");
     }
     // ------------------
     
@@ -48,9 +47,13 @@ public class Catalogo{
 
     // Listar usuarios: login
     public void listarUsuarios(){
-        System.out.println("\n----- Usuarios -----");
-        for (Usuario u : usuarios) {
-            System.out.println(u.getLogin());
+        if(usuarios.isEmpty()){
+            System.out.println("Sem usuarios T_T");
+        } else{
+            System.out.println("\n----- Usuarios -----");
+            for (Usuario u : usuarios) {
+                System.out.println(u.getLogin());
+            }
         }
     }
     

@@ -1,6 +1,7 @@
 package poo.catalogo;
 
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 import poo.midia.*;
 
@@ -170,7 +171,7 @@ public class Usuario {
         scan.close();
     }
 
-    // Usuario se cadastrar no catalogo
+    // Usuario se cadastra no catalogo
     public void cadastrar(ArrayList<Usuario> u, String login, String senha){
         this.login = login;
         this.senha = senha;

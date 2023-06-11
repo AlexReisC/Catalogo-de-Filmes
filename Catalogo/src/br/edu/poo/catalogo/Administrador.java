@@ -2,6 +2,7 @@ package poo.catalogo;
 
 import poo.midia.*;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Administrador {
@@ -51,11 +52,26 @@ public class Administrador {
         m.setEstudio(scan.nextLine());
         System.out.print("Diretor: ");
         m.setDiretor(scan.nextLine());
-        System.out.print("Ano de Lançamento: ");
-        m.setAnoDeEstreia(scan.nextInt());
-        System.out.print("Classificação etária: ");
-        m.setClassificacaoEtaria(scan.nextInt());
+        
+        try {
+            System.out.print("Ano de Lançamento: ");
+            m.setAnoDeEstreia(scan.nextInt());
+        } catch (InputMismatchException e) {
+            System.out.println("O ano deve ser um inteiro. Tente novamente: ");
+            scan.nextLine();
+            m.setAnoDeEstreia(scan.nextInt());
+        }
+        
+        try {
+            System.out.print("Classificação etária: ");
+            m.setClassificacaoEtaria(scan.nextInt());
+        } catch (InputMismatchException e) {
+            System.out.println("A classificacao etaria deve ser um inteiro. Tente novamente: ");
+            scan.nextLine();
+            m.setClassificacaoEtaria(scan.nextInt());
+        }
 
+        System.out.println("Midia adicionada!");
         midias.add(m);
         scan.close();
     }
@@ -63,7 +79,7 @@ public class Administrador {
     // Remover um titulo do catalogo
     public void removerrMidia(Midia m, ArrayList<Midia> midias){
         if(midias.isEmpty()){
-            System.out.println("Catalogo de midias vazio!");
+            System.out.println("Catalogo está vazio!");
         } else{
             midias.remove(m);
             System.out.println(m.getTitulo() + " foi removido.");
