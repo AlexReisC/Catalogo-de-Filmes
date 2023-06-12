@@ -28,6 +28,6 @@ public class Main {
         //u1.pesquisarPorGenero("Super heroi", c.midias);
         //u1.favoritar("Homem de Ferro", c.midias);
         //u1.listarFavoritos();
-        //u1.avaliar(filme2, c.midias);
+        u1.avaliar(filme2);
     }
 }

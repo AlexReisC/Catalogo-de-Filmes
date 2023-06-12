@@ -1,7 +1,6 @@
 package poo.catalogo;
 
 import java.util.ArrayList;
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 import poo.midia.*;
 
@@ -10,10 +9,12 @@ public class Usuario {
     private String login;
     private String senha;
     private ArrayList<Midia> favoritos;
+    Scanner scan;
 
     public Usuario(String nome){
         this.nome = nome;
         favoritos = new ArrayList<>();
+        scan = new Scanner(System.in);
     }
 
     public String getNome() {
@@ -158,17 +159,14 @@ public class Usuario {
     // -----------------------
 
     // Avaliar uma obra especifica
-    public void avaliar(Midia m, ArrayList<Midia>midias){
-        Scanner scan = new Scanner(System.in);
-        System.out.println("\n--- Avaliar obra ---");
+    public void avaliar(Midia m){
         
+        System.out.println("\n--- Avaliar obra ---");
         System.out.println("Critica: ");
         m.setCritica(scan.nextLine());
         System.out.println("Nota: ");
         m.setNota(scan.nextDouble());
-        scan.nextLine();
-
-        scan.close();
+        
     }
 
     // Usuario se cadastra no catalogo

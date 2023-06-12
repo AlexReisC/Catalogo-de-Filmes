@@ -73,7 +73,6 @@ public class Administrador {
 
         System.out.println("Midia adicionada!");
         midias.add(m);
-        scan.close();
     }
 
     // Remover um titulo do catalogo
