@@ -1,6 +1,7 @@
 package poo.catalogo;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import poo.midia.*;
 
@@ -160,13 +161,18 @@ public class Usuario {
 
     // Avaliar uma obra especifica
     public void avaliar(Midia m){
-        
         System.out.println("\n--- Avaliar obra ---");
+
         System.out.println("Critica: ");
         m.setCritica(scan.nextLine());
-        System.out.println("Nota: ");
-        m.setNota(scan.nextDouble());
-        
+
+        try {
+           System.out.println("Nota: ");
+            m.setNota(scan.nextDouble()); 
+        } catch (InputMismatchException e) {
+            System.out.println("Digite um numero ponto flutuante (com ',')");
+            m.setNota(scan.nextDouble());
+        }
     }
 
     // Usuario se cadastra no catalogo
