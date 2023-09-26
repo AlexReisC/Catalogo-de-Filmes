@@ -76,7 +76,7 @@ public class Administrador {
     }
 
     // Remover um titulo do catalogo
-    public void removerrMidia(Midia m, ArrayList<Midia> midias){
+    public void removerMidia(Midia m, ArrayList<Midia> midias){
         if(midias.isEmpty()){
             System.out.println("Catalogo está vazio!");
         } else{

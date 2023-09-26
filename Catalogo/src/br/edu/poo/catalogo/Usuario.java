@@ -9,6 +9,7 @@ public class Usuario {
     private String nome;
     private String login;
     private String senha;
+    private boolean logado = false;
     private ArrayList<Midia> favoritos;
     Scanner scan;
 
@@ -54,7 +55,7 @@ public class Usuario {
     public void favoritar(String nome, ArrayList<Midia> midias){
         boolean achou = false;
         for (Midia midia : midias) {
-            if (midia.getTitulo().equals(nome)) {
+            if (midia.getTitulo().equalsIgnoreCase(nome)) {
                 favoritos.add(midia);
                 achou = true;
                 System.out.println("Adicionado aos favoritos!");
@@ -106,7 +107,7 @@ public class Usuario {
             System.out.println("\n-----------------\nObras do genero " + genero + ":");
 
             for (Midia m : midias) {
-                if (m.getGenero().equals(genero)) {
+                if (m.getGenero().equalsIgnoreCase(genero)) {
                     System.out.println(m.getTitulo() + " (" + m.getAnoDeEstreia() + ")");
                     achou = true;
                 }
@@ -161,18 +162,22 @@ public class Usuario {
 
     // Avaliar uma obra especifica
     public void avaliar(Midia m){
-        System.out.println("\n--- Avaliar obra ---");
+        if(logado == true){
+            System.out.println("\n--- Avaliar obra ---");
+            System.out.println("Critica: ");
+            m.setCritica(scan.nextLine());
 
-        System.out.println("Critica: ");
-        m.setCritica(scan.nextLine());
-
-        try {
-           System.out.println("Nota: ");
-            m.setNota(scan.nextDouble()); 
-        } catch (InputMismatchException e) {
-            System.out.println("Digite um numero ponto flutuante (com ',')");
-            m.setNota(scan.nextDouble());
+            try {
+                System.out.println("Nota: ");
+                m.setNota(scan.nextDouble());
+            } catch (InputMismatchException e) {
+                System.out.println("Digite um numero ponto flutuante ('8,5')");
+                m.setNota(scan.nextDouble());
+            }
+        } else{
+            System.out.println("Faça login para avaliar.");
         }
+
     }
 
     // Usuario se cadastra no catalogo
@@ -184,9 +189,10 @@ public class Usuario {
 
     // Usuario faz login no catalogo
     public void login(Catalogo catalogo, String login, String senha){
-        if(this.login == login && this.senha == senha){
-            System.out.println("Login realizado");
-        } else{
+        if (this.login.equals(login) && this.senha.equals(senha)) {
+            logado = true;
+            System.out.println("Login realizado!");
+        } else {
             System.out.println("Login ou senha incorretos. Tente novamente.");
         }
     }

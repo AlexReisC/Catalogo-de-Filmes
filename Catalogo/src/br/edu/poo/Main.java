@@ -19,8 +19,8 @@ public class Main {
         //adm.removerrMidia(filme2, c.midias);
 
         Usuario u1 = new Usuario("Alex");
-        //u1.cadastrar(c.usuarios, "Alek", "1234");
-        //u1.login(c, "Alek", "1234");
+        u1.cadastrar(c.usuarios, "Alek", "1234");
+        u1.login(c, "Alek", "1234");
         //c.listarUsuarios();
         //u1.pesquisarPorAnoDeEstreia(2008, c.midias);
         //u1.pesquisarPalavraChave("Homem", c.midias);
