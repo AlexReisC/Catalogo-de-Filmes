@@ -9,4 +9,5 @@ Sendo que o administrador tem a permissão para adicionar, remover e editar info
 
 Pretendo futuramente implementar um banco de dados para guardar as obras e um site para vizualizar o catalogo.
 
-![Diagrama de classes](diagrama_de_classes_catalogo.jpg)
+![Diagrama de classes](Catalogo/diagramas/diagrama_de_classes_catalogo.jpg)
+
